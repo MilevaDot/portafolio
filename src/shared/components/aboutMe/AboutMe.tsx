@@ -1,4 +1,4 @@
-import { Box, Heading, HStack, Image, Tag, TagLabel, Text, VStack } from "@chakra-ui/react"
+import { Box, Heading, Image, Stack, Tag, TagLabel, Text, VStack } from "@chakra-ui/react"
 import { CiLocationOn } from "react-icons/ci"
 import './aboutme.css'
 
@@ -9,7 +9,13 @@ const AboutMe = () => {
                 id='about-me'
                 padding='80px 0 20px 0'
                 >
-                <HStack spacing='2em'>
+                <Stack
+                    direction={{
+                        base: 'column',
+                        md: 'row',
+                    }} spacing='2em'
+                    alignItems='center'
+                    >
                     <Box
                         boxSize='240px'
                         borderRadius='full'
@@ -48,7 +54,7 @@ const AboutMe = () => {
                             Me entusiasma colaborar con otros y abordar proyectos desafiantes que me impulsen a crecer como profesional.
                         </Text>
                     </VStack>
-                </HStack>
+                </Stack>
             </Box>
         </>
     )

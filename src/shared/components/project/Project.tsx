@@ -1,5 +1,5 @@
 import { ExternalLinkIcon } from "@chakra-ui/icons"
-import { Box, Heading, HStack, Image, Link, Tag, TagLabel, Text } from "@chakra-ui/react"
+import { Box, Flex, Grid, GridItem, Heading, HStack, Image, Link, Stack, Tag, TagLabel, Text, VStack } from "@chakra-ui/react"
 import { BiLogoTypescript } from "react-icons/bi"
 import { FaReact } from "react-icons/fa"
 import { SiChakraui, SiVite } from "react-icons/si"
@@ -23,9 +23,22 @@ const Project = () => {
                     >
                     Proyectos
                 </Heading>
-                <HStack margin='20px 0' spacing='2em'>
+                <Stack
+                    direction={{
+                        base: 'column',
+                        md: 'column',
+                        lg: 'row'
+                    }}
+                    margin='20px 0'
+                    spacing='2em'
+                    alignItems='center'
+                    >
                     <Box
-                        width='20%'
+                        width={{
+                            base: '100%',
+                            md: '100%',
+                            lg: '20%'
+                        }}
                         overflow='hidden'
                         borderRadius='10px'
                         >
@@ -53,7 +66,13 @@ const Project = () => {
                             </SwiperSlide>
                         </Swiper>
                     </Box>
-                    <Box width='80%'>
+                    <Box
+                        width={{
+                            base: '100%',
+                            md: '100%',
+                            lg: '80%'
+                        }}
+                        >
                         <Link
                             href='https://tendo-one.vercel.app/'
                             target='_blank'
@@ -75,26 +94,38 @@ const Project = () => {
                         <Text>
                             Tendo es una web que muestra y gestiona productos. También permite generar un carrito de compras. Es posible crear dos tipos de usuario: Público y Administrador. El primero puede usar el carrito y generar una compra, mientras que el segundo puede entrar a una plataforma para gestionar la creación de los productos.
                         </Text>
-                        <HStack>
-                            <Tag className='projectItemContainer' size='lg' backgroundColor='#a4bd3a' borderRadius='full' cursor='pointer'>
-                                <FaReact className='projectItem' style={{'backgroundColor': '#a4bd3a'}} />
-                                <TagLabel className='projectItem' backgroundColor='#a4bd3a' fontSize='16px'>React</TagLabel>
-                            </Tag>
-                            <Tag className='projectItemContainer' size='lg' backgroundColor='#a4bd3a' borderRadius='full' cursor='pointer'>
-                                <SiVite className='projectItem' style={{'backgroundColor': '#a4bd3a'}} />
-                                <TagLabel className='projectItem' backgroundColor='#a4bd3a' fontSize='16px'>Vite</TagLabel>
-                            </Tag>
-                            <Tag className='projectItemContainer' size='lg' backgroundColor='#a4bd3a' borderRadius='full' cursor='pointer'>
-                                <BiLogoTypescript className='projectItem' style={{'backgroundColor': '#a4bd3a'}} />
-                                <TagLabel className='projectItem' backgroundColor='#a4bd3a' fontSize='16px'>TypeScript</TagLabel>
-                            </Tag>
-                            <Tag className='projectItemContainer' size='lg' backgroundColor='#a4bd3a' borderRadius='full' cursor='pointer'>
-                                <SiChakraui className='projectItem' style={{'backgroundColor': '#a4bd3a'}} />
-                                <TagLabel className='projectItem' backgroundColor='#a4bd3a' fontSize='16px'>Chakra UI</TagLabel>
-                            </Tag>
-                        </HStack>
+                        <Flex
+                            wrap='wrap'
+                            gap='1em'
+                            marginTop='1em'
+                            >
+                            <GridItem>
+                                <Tag className='projectItemContainer' size='lg' backgroundColor='#a4bd3a' borderRadius='full' cursor='pointer'>
+                                    <FaReact className='projectItem' style={{'backgroundColor': '#a4bd3a'}} />
+                                    <TagLabel className='projectItem' backgroundColor='#a4bd3a' fontSize='16px'>React</TagLabel>
+                                </Tag>
+                            </GridItem>
+                            <GridItem>
+                                <Tag className='projectItemContainer' size='lg' backgroundColor='#a4bd3a' borderRadius='full' cursor='pointer'>
+                                    <BiLogoTypescript className='projectItem' style={{'backgroundColor': '#a4bd3a'}} />
+                                    <TagLabel className='projectItem' backgroundColor='#a4bd3a' fontSize='16px'>TypeScript</TagLabel>
+                                </Tag>
+                            </GridItem>
+                            <GridItem>
+                                <Tag className='projectItemContainer' size='lg' backgroundColor='#a4bd3a' borderRadius='full' cursor='pointer'>
+                                    <SiVite className='projectItem' style={{'backgroundColor': '#a4bd3a'}} />
+                                    <TagLabel className='projectItem' backgroundColor='#a4bd3a' fontSize='16px'>Vite</TagLabel>
+                                </Tag>
+                            </GridItem>
+                            <GridItem>
+                                <Tag className='projectItemContainer' size='lg' backgroundColor='#a4bd3a' borderRadius='full' cursor='pointer'>
+                                    <SiChakraui className='projectItem' style={{'backgroundColor': '#a4bd3a'}} />
+                                    <TagLabel className='projectItem' backgroundColor='#a4bd3a' fontSize='16px'>Chakra UI</TagLabel>
+                                </Tag>
+                            </GridItem>
+                        </Flex>
                     </Box>
-                </HStack>
+                </Stack>
             </Box>
         </>
     )

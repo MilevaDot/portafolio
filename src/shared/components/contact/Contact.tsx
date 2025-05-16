@@ -1,4 +1,4 @@
-import { Box, Heading, HStack, Link, Tag, TagLabel, Text } from "@chakra-ui/react"
+import { Box, Heading, Link, Stack, Tag, TagLabel, Text } from "@chakra-ui/react"
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa"
 import { MdEmail } from "react-icons/md"
 import './contact.css'
@@ -21,17 +21,18 @@ const Contact = () => {
                 <Text>
                     Puedes escribirme por cualquiera de estos medios:
                 </Text>
-                <HStack padding='1em 0' spacing='1.5em'>
+                <Stack
+                    padding='1em 0'
+                    spacing='1.5em'
+                    direction={{
+                        base:'column',
+                        md: 'row',
+                    }}
+                    >
                     <Link href='https://github.com/MilevaDot' target='_blank'>
                         <Tag className='contactItemContainer' size='lg' backgroundColor='#a4bd3a' borderRadius='full'>
                             <FaGithub className='contactItem' style={{'backgroundColor': '#a4bd3a'}} />
                             <TagLabel className='contactItem' backgroundColor='#a4bd3a' fontSize='16px'>GitHub</TagLabel>
-                        </Tag>
-                    </Link>
-                    <Link href='mailto:aaron.d.ilizarbe.s@gmail.com' target='_blank'>
-                        <Tag className='contactItemContainer' size='lg' backgroundColor='#a4bd3a' borderRadius='full'>
-                            <MdEmail className='contactItem' style={{'backgroundColor': '#a4bd3a'}} />
-                            <TagLabel className='contactItem' backgroundColor='#a4bd3a' fontSize='16px'>aaron.d.ilizarbe.s@gmail.com</TagLabel>
                         </Tag>
                     </Link>
                     <Link href='https://www.linkedin.com/in/aaron-dan-ilizarbe-saavedra-25988a209/' target='_blank'>
@@ -46,7 +47,13 @@ const Contact = () => {
                             <TagLabel className='contactItem' backgroundColor='#a4bd3a' fontSize='16px'>WhatsApp</TagLabel>
                         </Tag>
                     </Link>
-                </HStack>
+                    <Link href='mailto:aaron.d.ilizarbe.s@gmail.com' target='_blank'>
+                        <Tag className='contactItemContainer' size='lg' backgroundColor='#a4bd3a' borderRadius='full'>
+                            <MdEmail className='contactItem' style={{'backgroundColor': '#a4bd3a'}} />
+                            <TagLabel className='contactItem' backgroundColor='#a4bd3a' fontSize='16px'>aaron.d.ilizarbe.s@gmail.com</TagLabel>
+                        </Tag>
+                    </Link>
+                </Stack>
             </Box>
         </>
     )

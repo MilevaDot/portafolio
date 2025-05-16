@@ -8,7 +8,13 @@ const BaseLayout = ({ children } : {
     return (
         <>
             <Box height='100vh' color='white'>
-                <Box width='60%' maxWidth='60%' margin='0 auto'>
+                <Box
+                    margin='0 auto'
+                    width={{
+                        base: '85%',
+                        md: '60%'
+                    }}
+                    >
                     <Navbar />
                     { children }
                 </Box>
