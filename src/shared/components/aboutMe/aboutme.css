@@ -1,0 +1,4 @@
+.tagContainer:hover,
+.tagContainer:hover .tagItem {
+    background-color: #dce6b1 !important;
+}

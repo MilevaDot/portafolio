@@ -1,0 +1,4 @@
+.projectItemContainer:hover,
+.projectItemContainer:hover .projectItem {
+    background-color: #dce6b1 !important;
+}

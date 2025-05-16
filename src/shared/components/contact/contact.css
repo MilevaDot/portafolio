@@ -1,0 +1,4 @@
+.contactItemContainer:hover,
+.contactItemContainer:hover .contactItem {
+    background-color: #dce6b1 !important;
+}
