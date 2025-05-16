@@ -1,5 +1,5 @@
 import { ExternalLinkIcon } from "@chakra-ui/icons"
-import { Box, Flex, Grid, GridItem, Heading, HStack, Image, Link, Stack, Tag, TagLabel, Text, VStack } from "@chakra-ui/react"
+import { Box, Flex, GridItem, Heading, Image, Link, Stack, Tag, TagLabel, Text } from "@chakra-ui/react"
 import { BiLogoTypescript } from "react-icons/bi"
 import { FaReact } from "react-icons/fa"
 import { SiChakraui, SiVite } from "react-icons/si"
