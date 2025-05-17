@@ -23,7 +23,7 @@ const AboutMe = () => {
                         border="3px solid #ccc"
                         >
                         <Image
-                            src='/meGhibli.png'
+                            src='/meGhibli.webp'
                             alt='Photo Aaron'
                             objectFit='cover'
                             objectPosition='center 20%'

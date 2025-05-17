@@ -2,10 +2,10 @@ import { Box, Heading, HStack } from "@chakra-ui/react"
 import { BiLogoTypescript } from "react-icons/bi"
 import { DiDjango } from "react-icons/di"
 import { FaBootstrap, FaCss3Alt, FaGithub, FaHtml5, FaPython, FaReact } from "react-icons/fa"
-import { IoLogoJavascript } from "react-icons/io"
+import { IoLogoJavascript } from "react-icons/io5"
 import { IoTerminal } from "react-icons/io5"
 import { RiVercelFill } from "react-icons/ri"
-import { SiChakraui, SiOdoo, SiVite } from "react-icons/si"
+import { SiAppwrite, SiChakraui, SiOdoo, SiVite } from "react-icons/si"
 import { Autoplay } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
 import 'swiper/swiper-bundle.css'
@@ -55,6 +55,7 @@ const Skills = () => {
                         <DiDjango color='#27AA78' size='60px' />
                         <SiVite color='#F7C926' size='60px' />
                         <RiVercelFill color='#000' size='60px' />
+                        <SiAppwrite color='#FD366E' size='60px' />
                     </HStack>
                 </SwiperSlide>
             </Swiper>
