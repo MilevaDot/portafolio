@@ -8,6 +8,7 @@ import Project from "./shared/components/project/Project"
 import Skills from "./shared/components/skills/Skills"
 import Education from "./shared/components/education/Education"
 import Contact from "./shared/components/contact/Contact"
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
             <ChakraProvider theme={Theme}>
                 <BaseLayout>
                     <>
+                        <Analytics />
                         <AboutMe />
                         <Experience />
                         <Project />
